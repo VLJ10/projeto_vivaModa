@@ -16,3 +16,7 @@ function nomes(cliente, produto) {
         return nomeCliente, nomeProduto
     }
 }
+cliente = 'Alfredo'
+produto = 'camisa'
+console.log(produto)
+console.log(cliente)

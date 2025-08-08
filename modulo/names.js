@@ -10,13 +10,13 @@ function nomes(cliente, produto) {
     let nomeCliente = cliente 
     let nomeProduto = produto
 
-    if (nomeClienteliente == undefined || nomeProduto == undefined ) {
+    if (nomeCliente == undefined || nomeProduto == undefined ) {
         return false
     }else{
         return nomeCliente, nomeProduto
     }
 }
-cliente = 'Alfredo'
+/* cliente = 'Jorge'
 produto = 'camisa'
 console.log(produto)
-console.log(cliente)
+console.log(cliente) */

@@ -6,17 +6,35 @@
 ***********************************************************/
 
 //Função que recebe o Nome do cliente e do produto 
-function nomes(cliente, produto) {
-    let nomeCliente = cliente 
-    let nomeProduto = produto
 
-    if (nomeCliente == undefined || nomeProduto == undefined ) {
+const MESSAGE_ERROR_NAN = 'ERRO: Digite somente numeros'
+
+function nomeClientes(cliente) {
+    let nomeCliente = cliente
+
+
+    if (!isNaN(nomeCliente)) {
+        return console.log(MESSAGE_ERROR_NAN)
+    } else if (nomeCliente == undefined) {
         return false
-    }else{
-        return nomeCliente, nomeProduto
+    } else {
+        return nomeCliente
     }
 }
-/* cliente = 'Jorge'
-produto = 'camisa'
-console.log(produto)
-console.log(cliente) */
+
+function nomeProduto(produto) {
+    let nomeProduto = produto
+    if(nomeProduto == undefined){
+        return false
+    }else if(!isNaN(nomeProduto)){
+        console.log(MESSAGE_ERROR_NAN)
+    }else{
+        return nomeProduto
+    }
+
+}
+module.exports = {
+    nomeClientes,
+    nomeProduto
+
+} 

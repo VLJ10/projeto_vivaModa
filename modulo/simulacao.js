@@ -21,10 +21,13 @@ function simulacao(capital, taxaJuros, vezesDeJuros, tempo){
 
     let montante = p * ((1 + (r/n)) ** (n * t))
 
-    return Number(montante).toFixed(2)
+    return {valor: Number(montante).toFixed(2), preco: p, parcela: n}
 
 }
 
-let teste = simulacao("300", "3", "5", "1")
-console.log(teste)
 
+
+module.exports = {
+    simulacao
+
+}

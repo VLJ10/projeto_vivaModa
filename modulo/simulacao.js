@@ -12,6 +12,14 @@
  * t = tempos em anos
  */
 
+let capital
+let taxaJuros 
+let vezesDeJuros
+let tempo
+     
+    
+    
+
 function simulacao(capital, taxaJuros, vezesDeJuros, tempo){
 
     let p = Number(capital)
@@ -28,6 +36,10 @@ function simulacao(capital, taxaJuros, vezesDeJuros, tempo){
 
 
 module.exports = {
-    simulacao
+    simulacao,
+    capital,
+    taxaJuros,
+    vezesDeJuros,
+    tempo
 
 }

@@ -7,7 +7,7 @@
 
 
 const MESSAGE_ERROR_EMPTY = 'É necessário preencher todos os campos.'
-const MESSAGE_ERROR_INVALID = 'O nome do cliente e do produto devem conter apenas letras e espaços.'
+const MESSAGE_ERROR_INVALID = 'A entrada de números é proibida digite apenas letras.'
 const MESSAGE_ERROR_NAN = 'A entrada de números é proibida digite apenas letras.'
 
 //Criar um objeto de entrada de dados
@@ -31,7 +31,7 @@ entradaDeDados.question('Digite seu nome: ', function (nomeCliente) {
 
 
     } else if (!isNaN(nomeCliente)) {
-        console.log(MESSAGE_ERROR_NAN)
+        console.log(MESSAGE_ERROR_INVALID)
         entradaDeDados.close()
     } else {
         entradaDeDados.question('Digite o nome do produto: ', function (nomeProduto) {
@@ -43,7 +43,7 @@ entradaDeDados.question('Digite seu nome: ', function (nomeCliente) {
                 entradaDeDados.close()
 
             } else if (!isNaN(nomeProduto)) {
-                console.log(MESSAGE_ERROR_NAN)
+                console.log(MESSAGE_ERROR_INVALID)
                 entradaDeDados.close()
 
             } else {
